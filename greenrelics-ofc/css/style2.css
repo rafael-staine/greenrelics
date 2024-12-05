@@ -1,0 +1,270 @@
+:root {
+    --black: hsl(0, 0%, 0%);
+    --black-5: hsl(0, 0%, 5%);
+    --black-10: hsl(0, 0%, 10%);
+    --black-25: hsl(0, 0%, 25%);
+    --black-50: hsl(0, 0%, 50%);
+    --black-75: hsl(0, 0%, 75%);
+    --white: hsl(0, 0%, 100%);
+    --red: hsl(0, 100%, 50%);
+    --red2: hsl(0, 70%, 50%);
+    --yellow: hsl(65, 100%, 50%);
+    --green: hsl(120, 100%, 50%);
+    --green2: hsl(120, 80%, 45%);
+    --blue: hsl(202, 100%, 50%);
+    --green3: #228B22;
+    --eerie-black-2_85: hsla(0, 0%, 12%, 0.85);
+
+    /* fontes */
+    --ff-oswald: "Oswald", sans-serif;
+    --ff-rubik: "Rubik", sans-serif;
+
+    /* tamanho fs */
+    --fs-40: 4rem;
+    /* 4x16*/
+    --fs-30: 3rem;
+    --fs-24: 1.4rem;
+    --fs-18: 1.8rem;
+    --fs-14: 1.4rem;
+    --fs-12: 1.3rem;
+
+    --fw-300: 300;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+    /* Espaço */
+    --section-padding: 80px;
+
+    /* borda */
+    --radius-5: 5px;
+    --radius-5: 8px;
+
+    /* Sombra */
+    --shadow-1: 10px 0 60px hsla(0, 0%, 15%, 0.07);
+    --shadow-2: 10px 0 60px hsla(0, 0%, 15%, 0.1);
+
+    /* Transição */
+    --transition-1: 0.25s ease;
+    --transition-2: 0.50s ease;
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+/*-----------------------------*\
+    Reset
+\*-----------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+data,
+input,
+button,
+textarea,
+ion-icon {
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    height: auto;
+}
+
+input,
+select,
+textarea {
+    background: var(--white);
+    border: none;
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+html {
+    font-family: var(--ff-rubik);
+    font-size: 12px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+    color: var(--white);
+    font-size: 1.6rem;
+    line-height: 2;
+    max-width: 100%;
+    background-color: black;
+}
+
+:focus-visible {
+    outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--green3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--green2);
+}
+
+/*-----------------------------*\
+    Style - reuso
+\*-----------------------------*/
+
+a {
+    text-decoration: none;
+}
+
+.section {
+    padding-block: var(--section-padding);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.grid-list {
+    display: grid;
+    gap: 30px;
+}
+
+/*-----------------------------*\
+    Barra de menu
+\*-----------------------------*/
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: var(--green3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color: var(--white);
+  font-size: var(--fs-large);
+}
+
+/* Container principal */
+.container {
+  margin-top: 100px;
+}
+
+/* Recursos */
+.recursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.rec-container {
+  padding: 20px;
+  background-color: rgba(240, 255, 255, 0.2);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rec-container:hover {
+  transform: translateY(-5px);
+  background-color: rgba(240, 255, 255, 0.3);
+}
+
+.h1-rec {
+  color: var(--green);
+  font-size: var(--fs-large);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.p-rec {
+  color: var(--white);
+  font-size: var(--fs-medium);
+  text-align: center;
+}
+
+.img-renovavel {
+    width: 150px;
+    height: 150px;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: var(--green3);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.text-rod {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: var(--fw-700);
+  text-align: center;
+  margin: 0;
+}
+
+.rec-container-link {
+    padding: 20px;
+    background-color: rgba(240, 255, 255, 0.2);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.h1-title-rec {
+    color: var(--green2);
+    font-size: var(--fs-30);
+}
+
+.p-p-rec {
+    text-align: justify;
+    font-size: 25px;
+}
