@@ -482,6 +482,11 @@ header {
   line-height: 1.6;
 }
 
+.text-social:hover {
+  color: var(--green2);
+  transition: 0.3s;
+}
+
 .item {
   display: flex;
   align-items: center;
